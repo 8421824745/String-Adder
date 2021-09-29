@@ -3,6 +3,8 @@
 public class Addition {
 	public static int Add(String numbers) throws Exception {
 		String arra=numbers.trim();
+		arra = arra.replaceAll("\n", ",");
+		//System.out.println(arra);
 		if(arra.isEmpty()) {
 			return 0;
 		}
@@ -10,7 +12,7 @@ public class Addition {
 			return 1;
 		}
 		
-		String[] arr=numbers.split(",");
+		String[] arr=arra.split(",");
 		//int k = Integer.parseInt(arr[0]);
 		//int j=Integer.parseInt(arr[1]);
 		int sum=0;
@@ -26,7 +28,7 @@ public class Addition {
 	}
 
 	public static void main(String[] args) throws Exception {
-	int s=Add("1,2,-3,5");
+	int s=Add("1\n2,3");
 	System.out.println(s);
 
 	}
