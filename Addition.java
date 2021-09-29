@@ -13,8 +13,6 @@ public class Addition {
 		}
 		
 		String[] arr=arra.split(",");
-		//int k = Integer.parseInt(arr[0]);
-		//int j=Integer.parseInt(arr[1]);
 		int sum=0;
 		for(int i=0;i<arr.length;i++) {
 			if(Integer.parseInt(arr[i])<0){
@@ -28,8 +26,14 @@ public class Addition {
 	}
 
 	public static void main(String[] args) throws Exception {
-	int s=Add("1\n2,3");
-	System.out.println(s);
+		// handling new line input
+		int s=Add("1,\n");
+		System.out.println(s);
+        
+		// handling multiple inputs
+		int c=Add("1,2,3,4,5");
+		System.out.println(c);
+
 
 	}
 
