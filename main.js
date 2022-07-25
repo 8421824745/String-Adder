@@ -353,7 +353,6 @@ const user = {
 }
 
 function getCloned(objData){
-     // code here
      let obj = {};
      if(Array.isArray(objData)){
         for(let i=0;i<objData.length;i++){
